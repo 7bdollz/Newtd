@@ -11,8 +11,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: rgb(3, 45, 3);
-  width: 100vw;
+  width: 100%;
 }
 
 ul {
@@ -27,12 +26,15 @@ ul {
 li {
   cursor: pointer;
   margin-left: 30px;
-  font-weight: 800;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
 }
 
 li:hover {
-  color: white;
+  background-color: skyblue;
   transition: 1s;
+  color: white;
 }
 
 header {
@@ -40,49 +42,120 @@ header {
   height: 10vh;
 }
 
-#imageholder {
-  height: 70vh;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  columns: gray;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-#logo {
-  margin-top: 20px;
-  color: white;
-}
-
-#heading {
-  text-align: center;
-  font-style: italic;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 2em;
-}
-
-#para {
-  text-align: center;
-  font-size: 1em;
-}
-
-#imageholder {
-  display: flex;
-  justify-content: center;
-}
-
 #content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  color: white;
   height: 80vh;
+  padding: 20px;
+  gap: 10px;
 }
 
 footer {
   color: rgb(34, 90, 51);
+}
+
+#datebar {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 2rem;
+}
+
+#currentday {
+  color: gray;
+  font-size: 0.9rem;
+}
+#searchbar {
+  padding: 20px;
+  display: flex;
+}
+
+#search {
+  width: 80%;
+  background-color: white;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#searchbtn {
+  padding: 10px;
+  width: fit-content;
+  margin-left: 10px;
+  background-color: skyblue;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.addbutton {
+  padding: 10px;
+  width: 90%;
+  font-size: 1.2em;
+  background-color: rgb(135, 206, 235, 0.9);
+  border: none;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  color: white;
+  align-self: center;
+}
+
+.modallabels {
+  display: block;
+  margin-top: 5px;
+}
+
+dialog {
+  padding: 10px;
+  margin-left: 4px;
+  border: none;
+}
+
+.mbtn {
+  padding: 5px;
+  margin-top: 4px;
+  width: fit-content;
+  margin-left: 10px;
+  background-color: skyblue;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+p {
+  font-size: 1rem;
+  color: black;
+}
+
+.infodiv {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: fit-content;
+  color: white;
+  background-color: skyblue;
+  border: none;
+  padding: 4px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.btndiv {
+  display: flex;
+  gap: 4px;
+}
+
+.taskdiv {
+  padding: 4px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: rgb(135, 206, 235, 0.9);
 }
