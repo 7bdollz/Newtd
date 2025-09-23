@@ -66,7 +66,7 @@ function searchitems(query) {
       let description = document.createElement("p");
       description.textContent = `Description:${r.description}`;
       let date = document.createElement("p");
-      date.textContent = `DAte:${r.date}`;
+      date.textContent = `Date:${r.date}`;
       let children = [type, title, description, date];
       children.forEach((child) => {
         resultdiv.appendChild(child);
