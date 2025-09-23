@@ -3,6 +3,7 @@ import "./style.css";
 import { loadEventsPage } from "./pages/loadeventspage";
 import { loadProjectsPage } from "./pages/loadprojectspage";
 import { loadTasksPage } from "./pages/loadtaskspage";
+import { loadfromstorage } from "./fucntions/storage";
 
 let dateBar = document.querySelector("#datebar");
 let searchBar = document.querySelector("#searchbar");
@@ -66,7 +67,7 @@ let taskArrays = [];
 let projectArrays = [];
 let eventArrays = [];
 //add eventlisteners to dashboarditems//
-
+loadfromstorage();
 projectsection.addEventListener("click", () => {
   loadProjectsPage();
 });

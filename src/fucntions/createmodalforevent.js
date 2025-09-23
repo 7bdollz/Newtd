@@ -1,6 +1,7 @@
 import { content, eventArrays } from "..";
 import { loadEventsPage } from "../pages/loadeventspage";
 import { event } from "./createevent";
+import { savetostorage } from "./storage";
 let createmodalforevent = () => {
   let modal = document.createElement("dialog");
   let titlelabel = document.createElement("label");
@@ -41,6 +42,7 @@ let createmodalforevent = () => {
     console.log("Date input value:", date.value); // Add this line for debugging
     let newevent = new event(title.value, description.value, date.value);
     eventArrays.push(newevent);
+    savetostorage();
     modal.close();
     loadEventsPage(); // Call loadeventspage to refresh the content
   });

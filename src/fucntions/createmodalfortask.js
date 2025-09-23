@@ -1,6 +1,7 @@
 import { content, taskArrays } from "..";
 import { loadTasksPage } from "../pages/loadtaskspage";
 import { task } from "./createtask";
+import { savetostorage } from "./storage";
 let createmodalfortasks = () => {
   let modal = document.createElement("dialog");
   let titlelabel = document.createElement("label");
@@ -42,6 +43,7 @@ let createmodalfortasks = () => {
     console.log("Date input value:", date.value); // Add this line for debugging
     let newtask = new task(title.value, description.value, date.value);
     taskArrays.push(newtask);
+    savetostorage();
     modal.close();
     loadTasksPage(); // Call loadProjectsPage to refresh the content
   });

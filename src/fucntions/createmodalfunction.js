@@ -1,6 +1,7 @@
 import { content, projectArrays } from "..";
 import { loadProjectsPage } from "../pages/loadprojectspage";
 import { project } from "./createproject";
+import { savetostorage } from "./storage";
 let createmodalforproject = () => {
   let modal = document.createElement("dialog");
   let titlelabel = document.createElement("label");
@@ -41,6 +42,7 @@ let createmodalforproject = () => {
     console.log("Date input value:", date.value); // Add this line for debugging
     let newproject = new project(title.value, description.value, date.value);
     projectArrays.push(newproject);
+    savetostorage();
     modal.close();
     loadProjectsPage(); // Call loadProjectsPage to refresh the content
   });

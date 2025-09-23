@@ -2,6 +2,7 @@ import { content, taskArrays } from "..";
 import { task } from "./createtask";
 import { project } from "./createproject";
 import { createmodalforproject } from "./createmodalfunction";
+import { savetostorage } from "./storage";
 
 let createmodalfortasks_projects = (projectInstance) => {
   let modal = document.createElement("dialog");
@@ -44,6 +45,7 @@ let createmodalfortasks_projects = (projectInstance) => {
     let newtask = new task(title.value, description.value, date.value);
     taskArrays.push(newtask);
     projectInstance.addTask(newtask);
+    savetostorage();
 
     modal.close();
     modal.remove();
