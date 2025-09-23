@@ -4,6 +4,7 @@ import { loadEventsPage } from "./pages/loadeventspage";
 import { loadProjectsPage } from "./pages/loadprojectspage";
 import { loadTasksPage } from "./pages/loadtaskspage";
 import { loadfromstorage } from "./fucntions/storage";
+import { searchitems } from "./fucntions/search";
 
 let dateBar = document.querySelector("#datebar");
 let searchBar = document.querySelector("#searchbar");
@@ -36,6 +37,12 @@ searchinput.placeholder = "search tasks or projects with id";
 searchinput.id = "search";
 searchBar.appendChild(searchinput);
 let searchbtn = document.createElement("button");
+searchbtn.addEventListener("click", () => {
+  let query = searchinput.value.trim();
+  if (query !== "") {
+    searchitems(query);
+  }
+});
 searchbtn.id = "searchbtn";
 searchbtn.textContent = "search";
 searchBar.appendChild(searchbtn);
