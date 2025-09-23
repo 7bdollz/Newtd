@@ -1,7 +1,9 @@
 import { content, projectArrays, taskArrays, eventArrays } from "..";
+import { loadfromstorage } from "./storage";
 
 function searchitems(query) {
   content.innerHTML = "";
+  loadfromstorage();
   let results = [];
 
   //search projects//
